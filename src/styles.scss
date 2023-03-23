@@ -7,7 +7,7 @@ body{
 }
 
 .bg-red, header{
-  background-color: #8e210b!important; //con questo vado a dire che questo è è più importante di bg red app.component.html
+  background-color: #070707!important;
 }
 
 nav{
@@ -18,6 +18,21 @@ nav{
   padding: 16px;
 }
 html, body { height: 100%; }
+
+.carousel-caption {
+  top: 27rem;
+  bottom: auto;
+
+  h3{
+    //font-family: "Homemade Apple", cursive;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 40px;
+    text-shadow: black 2px 3px 3px;
+    height: 50px;
+
+  }
+}
+
 
 
 /* Importing Bootstrap SCSS file. */
