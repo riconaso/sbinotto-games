@@ -1,0 +1,75 @@
+.container-titolo{
+  h2{
+    font-size: 35px;
+    color: #176b6e!important;
+    font-family: 'Orbitron', sans-serif, strong;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  };
+
+  .paragrafo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    text-align: justify;
+    background-color: #6d1f1f;
+    font-family: 'Roboto Serif', serif;
+    padding: 20px;
+  }
+}
+
+#promo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+}
+
+.promo-images {
+
+ margin: 5px;
+ position: relative;
+
+}
+.promo-text {
+
+  position: absolute; /* imposta il testo come posizionato rispetto al contenitore padre */
+  top: 0; /* imposta la distanza del testo dall'alto del contenitore */
+  left: 0; /* imposta la distanza del testo dalla sinistra del contenitore */
+  width: 100%; /* imposta la larghezza del testo uguale alla larghezza del contenitore */
+  text-align: center; /* centra il testo orizzontalmente */
+ // background-color: rgba(0, 0, 0, 0.7); /* imposta uno sfondo trasparente */
+  color: rgb(245, 242, 242); /* imposta il colore del testo */
+  padding: 132px; /* imposta il padding del testo */
+  box-sizing: border-box; /* include il padding all'interno delle dimensioni del contenitore */
+  font-family: 'Rubik Iso', cursive;
+  font-size: 25px;
+}
+.promo-images img {
+  width: 30%;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif, strong;
+  font-size: 30px;
+  color: #176b6e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+

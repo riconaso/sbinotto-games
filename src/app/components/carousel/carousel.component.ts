@@ -12,7 +12,8 @@ export class CarouselComponent {
     {id: 2,
       label: 'Crash Bandicoot'},
     {id: 3,
-      label: 'Pokemon'}
+      label: 'Grand Theft Auto VI'},
+
   ];
 
   percorso = "../../../assets/images/carousel"

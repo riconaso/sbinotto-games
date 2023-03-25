@@ -24,7 +24,6 @@ html, body { height: 100%; }
   bottom: auto;
 
   h3{
-    //font-family: "Homemade Apple", cursive;
     font-family: 'Rubik Iso', cursive;
     font-size: 40px;
     text-shadow: black 2px 3px 3px;
@@ -33,6 +32,11 @@ html, body { height: 100%; }
   }
 }
 
+.icona-sbinottogames-footer{
+  width: 60px;
+  height: 60px;
+
+}
 
 
 /* Importing Bootstrap SCSS file. */
