@@ -1,0 +1,46 @@
+
+  <!-- <div id="main container">
+    <div class="container-div">
+      <img class="img-copertina" [src]="gioco.imaggine">
+      <ul class="titolo-gioco">
+        <li>
+            <h2>{{gioco.titolo}}</h2>
+        </li>
+        <li>
+          <p class="des-gioco">{{gioco.descrizione}}</p>
+        </li>
+        <li>
+          <p class="prezzo-gioco">€ {{gioco.prezzo}}</p>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+
+
+  <div id="main container">
+    <div class="container-div">
+      <img class="img-copertina" [src]="gioco.imaggine">  <!-- da correggere errore di battitura -->
+      <ul class="titolo-gioco">
+        <li>
+            <h2>{{gioco.titolo}}</h2>
+        </li>
+        <li>
+          <p class="des-gioco">{{gioco.descrizione}}</p>
+        </li>
+        <li>
+          <p class="prezzo-gioco">€ {{gioco.prezzo}}</p>
+        </li>
+        <li>
+          <div class="form-container">
+          <label for="piattaforma">Seleziona la piattaforma:</label>
+            <select id="piattaforma" name="piattaforma">
+              <option value="pc">PC</option>
+              <option value="ps4">PlayStation 4</option>
+              <option value="xbox">Xbox One</option>
+              <option value="switch">Nintendo Switch</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

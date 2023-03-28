@@ -11,6 +11,9 @@ import { GiochiComponent } from './components/giochi/giochi.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { GiocoCardComponent } from './shared/gioco-card/gioco-card.component';
+import { DetailComponent } from './components/giochi/detail/detail.component';
+import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HeaderComponent } from './shared/header/header.component';
     GiochiComponent,
     FooterComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    GiocoCardComponent,
+    DetailComponent,
+    GiochiListComponent
   ],
   imports: [
     BrowserModule,

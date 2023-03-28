@@ -1,24 +1,24 @@
-<header>
+<!-- <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-red">
     <div class="container-fluid">
       <img src="../assets/images/icona-sbinottogames.png" class="icona-sbinottogames">
-      <a class="navbar-brand" href="#">sbinottogames</a>
+      <a class="navbar-brand" routerLink="home">sbinottogames</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><mat-icon>home</mat-icon>Home</a>
+            <a class="nav-link active" aria-current="page" routerLink="home"><mat-icon>home</mat-icon>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><mat-icon>bookshelf</mat-icon>Libreria</a>
+            <a class="nav-link" routerLink="giochi"><mat-icon>bookshelf</mat-icon>Libreria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><mat-icon>account_circle</mat-icon>Account</a>
+            <a class="nav-link" ><mat-icon>account_circle</mat-icon>Account</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><mat-icon>shopping_cart</mat-icon>Carrello</a>
+            <a class="nav-link" routerLink="giochi"><mat-icon>shopping_cart</mat-icon>Carrelloooo</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -40,7 +40,7 @@
   <div class="container-fluid">
     <ul class="navbar-nav ms-auto text-center">
       <li class="nav-item">
-        <a class="nav-link" href="#"><mat-icon class="rounded-circle">trending_up</mat-icon>In tendenza</a>
+        <a class="nav-link" routerLink="giochi"><mat-icon class="rounded-circle">trending_up</mat-icon>In tendenza</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><mat-icon class="rounded-circle">event_available</mat-icon>Prossime Uscite</a>
@@ -53,16 +53,73 @@
       </li>
       <li class="nav-item">
         <div class="input-group">
-          <input type="text" class="form-control rounded-circle" placeholder="Cerca un gioco...">
-          <button class="btn btn-outline-light" type="button">
-            <mat-icon>search</mat-icon>
-          </button>
+          <input type="text" class="form-control circle" placeholder="Cerca un gioco...">
         </div>
       </li>
     </ul>
   </div>
 </nav>
 
+</header> -->
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-red">
+    <div class="container-fluid">
+      <img src="../assets/images/icona-sbinottogames.png" class="icona-sbinottogames">
+      <a class="navbar-brand" routerLink="home">sbinottogames</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav icone">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home"><mat-icon>home</mat-icon>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="giochi"><mat-icon>bookshelf</mat-icon>Libreria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="giochi"><mat-icon>shopping_cart</mat-icon>Carrello</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><mat-icon>videogame_asset</mat-icon>Playstation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><mat-icon>gamepad</mat-icon>Nintendo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><mat-icon>desktop_windows</mat-icon>PC</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-red nav-secondaria">
+    <div class="container-fluid">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="giochi"><mat-icon class="rounded-circle">trending_up</mat-icon>In tendenza</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><mat-icon class="rounded-circle">event_available</mat-icon>Prossime Uscite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><mat-icon class="rounded-circle">shopping_cart</mat-icon>Pre Ordini</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><mat-icon class="rounded-circle">local_offer</mat-icon>Giochi in sconto</a>
+        </li>
+        <li class="nav-item">
+          <div class="input-group">
+            <input type="text" class="form-control circle" placeholder="Cerca un gioco...">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
 

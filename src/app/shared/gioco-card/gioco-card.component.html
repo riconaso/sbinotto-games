@@ -1,0 +1,12 @@
+<div class="card-container" *ngFor="let gioco of giochi">
+  <div class="card">
+    <div class="card-image" [ngStyle]="{'background-image': 'url(' +gioco.imaggine +')'}"></div>
+    <div class="card-body">
+      <h5 class="card-title">{{gioco.titolo}}</h5>
+      <p class="card-text">
+        {{gioco.descrizione}}
+       </p>
+      <a  class="btn btn-primary" routerLink="dettaglio/{{gioco.titolo}}/{{gioco._id}}">Visualizza</a>
+    </div>
+  </div>
+</div>

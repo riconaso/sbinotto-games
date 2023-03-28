@@ -14,4 +14,10 @@ export class GiocoService {
   getGioco(): Observable<Gioco[]> {
     return of (GIOCHI);
   }
+
+  getGiochi(id: number): Observable<Gioco> {
+    const gioco = GIOCHI.find(gioco => gioco._id === id);
+    return of (gioco);
+
+  }
 }

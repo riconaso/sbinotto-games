@@ -1,0 +1,59 @@
+@import "../../../../styles/colors.scss";
+
+.img-copertina{
+margin-top: 20px;
+}
+
+
+.container-div{
+  display: flex; //Mi mette tutto ciò che c'è all'interno del container li mette tutti uno accanto all'altro
+}
+
+.titolo-gioco{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 40px;
+  color:  $primary-color-1;
+}
+
+
+.des-gioco{
+  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    text-align: justify;
+    background-color: #6d1f1f;
+    font-family: 'Roboto Serif', serif;
+    padding: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+}
+
+select:hover {
+  background-color: #ccc;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #999;
+}
+
+.form-container {
+  margin-right: auto; /* sposta il contenitore a sinistra */
+  display: flex; /* imposta il display come flessibile */
+  align-items: center; /* allinea verticalmente i figli */
+  margin-left: 20px; /* aggiunge un margine a sinistra per allineare il menu a tendina */
+}
+
