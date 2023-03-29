@@ -3,12 +3,13 @@ import { Gioco } from 'src/app/models/gioco.model';
 import { GiocoService } from 'src/app/services/gioco.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-tendenza',
+  templateUrl: './tendenza.component.html',
+  styleUrls: ['./tendenza.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class TendenzaComponent implements OnInit{
   giochi: Gioco[];
+
 
   constructor(private giocoService: GiocoService){};
 
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit{
    this.giocoService.getGioco().subscribe({
     next: (response) =>{
       this.giochi = response;
-      this.giochi = this.giochi.sort((a,b) => b._id - a._id).slice(0,8);
+      // this.giochi = this.giochi.sort((a,b) => b.tendenza - a.tendenza).slice(0,4);
+      this.giochi = this.giochi.filter(gioco => gioco.tendenza).slice(0,20);
 
 
     },

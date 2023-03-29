@@ -14,6 +14,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { GiocoCardComponent } from './shared/gioco-card/gioco-card.component';
 import { DetailComponent } from './components/giochi/detail/detail.component';
 import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list.component';
+import { TendenzaComponent } from './components/tendenza/tendenza.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list
     HeaderComponent,
     GiocoCardComponent,
     DetailComponent,
-    GiochiListComponent
+    GiochiListComponent,
+    TendenzaComponent,
+
   ],
   imports: [
     BrowserModule,

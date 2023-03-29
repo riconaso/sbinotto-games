@@ -20,4 +20,9 @@ export class GiocoService {
     return of (gioco);
 
   }
+
+  // getGiochiTendenza(tendenza: number): Observable<Gioco>{
+  //   const giocoInTendenza = GIOCHI.find(gioco => gioco.tendenza === tendenza);
+  //   return of (giocoInTendenza);
+  // }
 }

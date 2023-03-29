@@ -5,6 +5,9 @@ export interface Gioco{
   imaggine: string;
   prezzo: number;
   data: string;
+  //tendenza: number;
+  tendenza: boolean;
   pubblicato: true;
+
 
 }

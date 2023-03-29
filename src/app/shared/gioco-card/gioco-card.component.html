@@ -4,9 +4,9 @@
     <div class="card-body">
       <h5 class="card-title">{{gioco.titolo}}</h5>
       <p class="card-text">
-        {{gioco.descrizione}}
+        {{gioco.descrizione | slice: 0:250}}...
        </p>
-      <a  class="btn btn-primary" routerLink="dettaglio/{{gioco.titolo}}/{{gioco._id}}">Visualizza</a>
+      <a  class="btn btn-primary" routerLink="/giochi/dettaglio/{{gioco.titolo}}/{{gioco._id}}">Visualizza</a>
     </div>
   </div>
 </div>
