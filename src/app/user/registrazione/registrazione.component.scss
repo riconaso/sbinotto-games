@@ -1,0 +1,32 @@
+@import"../../../styles/colors.scss";
+
+p.help.is-danger{
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched{
+  border: 1px solid rgb(7, 216, 7);
+}
+
+.check{
+  height: 50px;
+  width: 70%;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.btn{
+  background-color: #db4109e1 !important;
+  border: none !important;
+}
+
+h6.mb-0.me-4 {
+  font-size: 15px;
+}

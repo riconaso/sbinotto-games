@@ -15,6 +15,8 @@ import { GiocoCardComponent } from './shared/gioco-card/gioco-card.component';
 import { DetailComponent } from './components/giochi/detail/detail.component';
 import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list.component';
 import { TendenzaComponent } from './components/tendenza/tendenza.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { TendenzaComponent } from './components/tendenza/tendenza.component';
     DetailComponent,
     GiochiListComponent,
     TendenzaComponent,
+    RegistrazioneComponent,
 
   ],
   imports: [
@@ -36,7 +39,9 @@ import { TendenzaComponent } from './components/tendenza/tendenza.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialExampleModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
