@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from 'src/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ImageModule } from 'primeng/image';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GiochiComponent } from './components/giochi/giochi.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -41,7 +45,11 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     MaterialExampleModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    CheckboxModule,
+    ImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

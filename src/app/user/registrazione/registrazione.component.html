@@ -1,6 +1,6 @@
 <section class="bg-dark">
   <div class="container ">
-    <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="row d-flex justify-content-center align-items-center ">
       <div class="col">
         <div class="card card-registration my-4">
           <div class="row g-0">
@@ -11,7 +11,7 @@
             </div>
             <div class="col-xl-6">
               <div class="card-body p-md-5 text-black">
-                <h3 class="mb-5 text-uppercase">Registrazione Utente SbinottoGames</h3>
+                <h3 class="mb-5 text-uppercase titolo">Registrazione Utente SbinottoGames</h3>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()">
                 <div class="row">
 
@@ -69,45 +69,50 @@
 
                 <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
 
-                  <h6 class="mb-0 me-4">Piattaforma: </h6>
+                  <h6 class="mb-0 me-4 piattaforma">Piattaforma: </h6>
 
                   <div class="form-check form-check-inline mb-0 me-4">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" formControlName="piattaforma"
                       value="option1" />
                     <label class="form-check-label" for="femaleGender">Playstation</label>
                   </div>
 
                   <div class="form-check form-check-inline mb-0 me-4">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender" formControlName="piattaforma"
                       value="option2" />
                     <label class="form-check-label" for="maleGender">X-Box</label>
                   </div>
 
                   <div class="form-check form-check-inline mb-0">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender" formControlName="piattaforma"
                       value="option3" />
                     <label class="form-check-label" for="otherGender">Nintendo</label>
                   </div>
+                  <p class="help is-danger" *ngIf="form.controls['piattaforma'].hasError('required') && form.get('piattaforma').touched">Il campo deve essere valorizzato.</p>
 
                 </div>
 
-
-
                 <div class="form-outline mb-4">
+
                   <label class="form-label" for="form3Example9">password</label>
-                  <input type="password" id="form3Example9" class="form-control form-control-lg" placeholder="Inserisci la password" name="password" formControlName="password"/>
-                  <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
-                  <p class="help is-danger" *ngIf="!form.get('password').valid && form.get('password').dirty"> La password deve essere lunga almeno 6 caratteri</p>
-
+                  <!-- <input type="password" id="form3Example9" class="form-control form-control-lg" placeholder="Inserisci la password" name="password" formControlName="password"/> -->
+                  <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern')">Il campo password deve contenere almeno 1 carattere speciale, 1 minuscola, 1 maiuscola, 1 numero ed essere lungo da 8 a 16 caratteri</p>
+                  <!-- <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p> -->
+                  <p-password [toggleMask]="true" formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$"></p-password>
+                 <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('password').dirty && form.get('password').touched"> Il campo password è obbligatorio</p>
+                  <!-- <p class="help is-danger" *ngIf="!form.get('password').valid && form.get('password').dirty"> La password deve essere lunga almeno 6 caratteri</p> -->
+                  <!-- <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern')">Il campo password deve contenere almeno 1 carattere speciale, 1 minuscola, 1 maiuscola, 1 numero ed essere lungo da 8 a 16 caratteri</p> -->
                 </div>
 
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example99">password</label>
-                  <input type="password" id="form3Example99" class="form-control form-control-lg" placeholder="Ripeti la password" name="ripetiPassword" formControlName="ripetiPassword"/>
-                  <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo password è obbligatorio</p>
-                          <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').dirty"> La password deve essere lunga almeno 6 caratteri</p>
 
+                  <label class="form-label" for="form3Example99">Ripeti Password</label>
+                  <!-- <input type="password" id="form3Example99" class="form-control form-control-lg" placeholder="Ripeti la password" name="ripetiPassword" formControlName="ripetiPassword"/> -->
+                  <p-password [toggleMask]="true" [feedback]="false" formControlName="ripetiPassword"></p-password>
+                  <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo password è obbligatorio</p>
+                  <!-- <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').dirty"> La password deve essere lunga almeno 6 caratteri</p> -->
+                  <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('ripetiPassword').touched">Attenzione la password inserita non combacia</p>
                 </div>
 
 
@@ -135,4 +140,7 @@
       </div>
     </div>
   </div>
+
+
+
 </section>
