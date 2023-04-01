@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
@@ -7,6 +6,7 @@ import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list
 import { DetailComponent } from './components/giochi/detail/detail.component';
 import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
+
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},

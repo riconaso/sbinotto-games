@@ -10,6 +10,7 @@ import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ImageModule } from 'primeng/image';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GiochiComponent } from './components/giochi/giochi.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -37,6 +38,7 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     TendenzaComponent,
     RegistrazioneComponent,
 
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,9 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     PasswordModule,
     DividerModule,
     CheckboxModule,
-    ImageModule
+    ImageModule,
+    FontAwesomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

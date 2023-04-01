@@ -28,7 +28,7 @@
           <p class="des-gioco">{{gioco.descrizione}}</p>
         </li>
         <li>
-          <p class="prezzo-gioco">€ {{gioco.prezzo}}</p>
+          <p class="prezzo-gioco">{{gioco.prezzo | currency:'EUR'}}</p>
         </li>
         <li>
           <div class="form-container">

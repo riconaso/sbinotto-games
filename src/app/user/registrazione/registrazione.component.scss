@@ -1,8 +1,10 @@
 @import"../../../styles/colors.scss";
 .titolo{
-  font-size: 18px;
-  font-family: 'Orbitron', sans-serif, cursive;
+  font-size: 20px;
+  font-family: "Orbitron", sans-serif, strong;
   color: $primary-color-1;
+  margin-left: 91px;
+  margin-bottom: 10px;
 }
 p.help.is-danger{
   margin-top: 10px;
@@ -30,39 +32,48 @@ input.ng-valid.ng-touched{
   background-color: #db4109e1 !important;
   border: none !important;
   color: white;
- border-radius: 25px;
+  border-radius: 25px;
+  width: 150px;
+  font-size: 23px;
 
 }
 
 // h6.mb-0.me-4 {
-//   font-size: 20px;
-// }
+  //   font-size: 20px;
+  // }
 
-h6.mb-0.me-4 {
-  font-size: 20px;
-  margin-top: 20px;
-}
+  h6.mb-0.me-4 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 
-.form-label {
-  margin-bottom: 0.5rem;
-  margin-top: 20px;
-}
+  .form-label {
+    margin-bottom: 0.5rem;
+    margin-top: 20px;
+  }
 
-.form-check .form-check-input {
-  float: left;
-  margin-left: -1.5em;
-  margin-top: 25px;
-}
+  .form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+    margin-top: 25px;
+  }
 
 
-label.form-check-label {
-  margin-top: 25px;
-}
+  label.form-check-label {
+    margin-top: 25px;
+  }
 
-.img-fluid {
-  max-width: 105%;
-  height: auto;
-}
+  .img-fluid {
+    max-width: 105%;
+    //height: auto;
+    height: 100%;
+  }
+
+
+  label.form-label {
+    font-weight: bold;
+  }
+
 
 
 
