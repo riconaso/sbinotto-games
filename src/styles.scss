@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import"~bootstrap/dist/css/bootstrap.css";
+@import"./styles/colors.scss";
 body{
   margin: 0;
   padding: 0;
@@ -66,6 +67,28 @@ html, body { height: 100%; }
 
   p-password.ng-valid.ng-touched > .p-password > .p-inputtext {
     border: 2px solid green;
+  }
+
+  .p-button-danger {
+    background-color:  #6d1f1f!important;
+    color: white;
+    border-radius: 10px!important;
+    width: 130px;
+    font-size: 25px!important;
+  }
+  .p-button-success {
+    background-color: $primary-color-1!important;
+    color: white;
+    border-radius: 10px!important;
+    width: 150px;
+    font-size: 25px!important;
+  }
+  .p-button-warning {
+    background-color: #db4109e1!important;
+    color: white!important;
+    border-radius: 10px!important;
+    width: 130px;
+    font-size: 25px!important;
   }
 
   /* Importing Bootstrap SCSS file. */

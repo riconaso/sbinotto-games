@@ -10,22 +10,27 @@ import { GiocoService } from 'src/app/services/gioco.service';
 export class HomeComponent implements OnInit{
   giochi: Gioco[];
 
-  constructor(private giocoService: GiocoService){};
+
+ constructor(private giocoService: GiocoService){};
+
 
 
   ngOnInit(): void {
-   this.giocoService.getGioco().subscribe({
-    next: (response) =>{
-      this.giochi = response;
-      this.giochi = this.giochi.sort((a,b) => b._id - a._id).slice(0,8);
+    this.giocoService.getGioco().subscribe({
+      next: (response) =>{
+        this.giochi = response;
+        this.giochi = this.giochi.sort((a,b) => b._id - a._id).slice(0,8);
 
 
-    },
-    error: (error) =>{
-      console.log(error);
-    }
-   })
+
+
+      },
+      error: (error) =>{
+        console.log(error);
+      }
+    })
   }
+
 
 
 

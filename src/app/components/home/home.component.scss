@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   .paragrafo{
@@ -36,4 +38,18 @@ div#giochiInTendenza{
   text-align: center;
 }
 
+// #bottom-container {
+//   position: fixed;
+//   bottom: 0;
+//   width: 100%;
+//   height: auto;
+//   background-color: #f2f2f2;
+//   padding: 10px;
+// }
 
+.paginator-container {
+ position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
