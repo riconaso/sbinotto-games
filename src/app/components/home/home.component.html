@@ -12,6 +12,19 @@
   </div>
 </div>
 
+<ng-template [ngIf]="nome">
+  <div id="container-utente">
+    <div id="dati-utente">
+      <h2>Grazie {{nome}} per esserti registrato, ecco i tuoi dati:</h2>
+      <ul>
+        <li>Nome: {{nome}}</li>
+        <li>Email: {{email}}</li>
+      </ul>
+        <button class="btn btn-primary btn-lg" (click)="closeModal()">Chiudi</button>
+    </div>
+  </div>
+</ng-template>
+
 
 
 

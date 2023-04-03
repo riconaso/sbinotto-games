@@ -1,9 +1,11 @@
+
 import { CustomerValidator } from './../customValidators';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { PrimeNGConfig} from 'primeng/api';
-
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
@@ -13,8 +15,13 @@ import { PrimeNGConfig} from 'primeng/api';
 export class RegistrazioneComponent implements OnInit{
 
   selectedCities: string[] = [];
-  constructor(private config: PrimeNGConfig){}
-  ngOnInit(): void {
+  constructor(
+    private config: PrimeNGConfig,
+    private userService: UserService,
+    private router: Router,
+     ){}
+
+     ngOnInit(): void {
     this.config.setTranslation({
       weak: 'povera',
       medium: 'media',
@@ -40,7 +47,15 @@ export class RegistrazioneComponent implements OnInit{
   );
 
   onSubmit(){
-    console.log(this.form.value);
+    //console.log(this.form.value);
+    const user = {
+      nome: this.form.value.nome,
+      email: this.form.value.email
+    }
+
+    this.userService.datiUtente.next(user);
+
+    this.router.navigate(['home']);
   }
 
 }

@@ -1,7 +1,6 @@
     .icone{
       font-size: 15px;
-      //padding-top: 2px;
-      // margin-right: 100px;
+
       margin-left: auto;
     }
     .icona-sbinottogames{
@@ -10,68 +9,51 @@
       margin-right: 5px;
     }
 
-    // .nav-link{
-      //   display: flex-end;
-      //   justify-content: flex-end;
-
-      // }
-
-      .navbar-brand{
-        font-family: 'Rubik Iso', cursive;
-        width: 55%;
-        font-size: 50px;
-        text-align: justify;
-        //margin:0 auto;
-        justify-content: end;
 
 
-      }
+    .navbar-brand{
+      font-family: 'Rubik Iso', cursive;
+      width: 55%;
+      font-size: 50px;
+      text-align: justify;
 
-      // .navbar-primaria{
-        //   font-family: 'Rubik Iso', cursive;
-        //   width: 55%;
-        //   font-size: 50px;
-        //   justify-content: end;
-        //   margin:0 auto;
-        // }
-
-        .nav-secondaria .navbar-nav {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          background-color: #db4109e1;
-          margin-right: -10px;
-          margin-left: -10px;
+      justify-content: end;
 
 
-        }
+    }
 
 
-        .nav-secondaria {
-          // margin-left: 0;
-          margin-left: -25px;
+    .nav-secondaria .navbar-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: #db4109e1;
+      margin-right: -10px;
+      margin-left: -10px;
 
 
-        }
-
-        .nav-secondaria .nav-link {
-          color: #000;
-          font-size: 1.25em;
-        }
-
-        .icone{
-          justify-content: center;
+    }
 
 
-          // .nav-item{
-            //   margin-right: 10px;
-            //   justify-content: center;
-            // }
+    .nav-secondaria {
 
-          }
+      margin-left: -25px;
 
-          li.nav-item {
-            margin-bottom: 10px;
-            margin-top: 10px;
-          }
+
+    }
+
+    .nav-secondaria .nav-link {
+      color: #000;
+      font-size: 1.25em;
+    }
+
+
+
+
+
+
+    li.nav-item {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
 

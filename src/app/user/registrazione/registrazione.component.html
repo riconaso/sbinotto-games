@@ -126,7 +126,7 @@
                     <label class="form-label" for="form3Example99">Ripeti Password</label>
                     <!-- <input type="password" id="form3Example99" class="form-control form-control-lg" placeholder="Ripeti la password" name="ripetiPassword" formControlName="ripetiPassword"/> -->
                     <p-password [toggleMask]="true" [feedback]="false" formControlName="ripetiPassword"></p-password>
-                    <p class="help is-danger" *ngIf="form.controls.password.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo password è obbligatorio</p>
+                    <p class="help is-danger" *ngIf="form.controls.ripetiPassword.hasError('required') && !form.get('ripetiPassword').dirty && form.get('ripetiPassword').touched"> Il campo ripeti password è obbligatorio</p>
                     <!-- <p class="help is-danger" *ngIf="!form.get('ripetiPassword').valid && form.get('ripetiPassword').dirty"> La password deve essere lunga almeno 6 caratteri</p> -->
                     <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('ripetiPassword').touched">Attenzione la password inserita non combacia</p>
                   </div>
@@ -146,7 +146,7 @@
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <!-- <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Registrati</button> -->
-                    <button type="submit" class="btn btn-warning btn-lg ms-2">Iscriviti</button>
+                    <button type="submit" class="btn btn-warning btn-lg ms-2" >Iscriviti</button>
                   </div>
                 </form>
               </div>
