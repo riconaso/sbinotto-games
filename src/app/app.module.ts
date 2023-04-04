@@ -11,6 +11,7 @@ import { DividerModule } from 'primeng/divider';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ImageModule } from 'primeng/image';
 import { ButtonModule } from 'primeng/button';
+import { PaginatorModule } from 'primeng/paginator';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { GiochiComponent } from './components/giochi/giochi.component';
@@ -54,7 +55,8 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     CheckboxModule,
     ImageModule,
     FontAwesomeModule,
-    ButtonModule
+    ButtonModule,
+    PaginatorModule
 
 
 

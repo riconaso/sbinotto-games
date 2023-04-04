@@ -91,9 +91,19 @@ div#container-utente {
     button.btn.btn-primary.btn-lg {
       width: 50%;
       margin-left: 25%;
-      background-color: $primary-color-1;
+      background-color: #db4109e1;
+      border-color: #db4109e1;
     }
   }
+
+  div#dati-utente {
+    background: white;
+    width: 60%;
+    height: 250px;
+    border: 5px solid #db4109e1!important;
+    border-radius: 30px;
+    padding: 16px;
+}
 }
 
 

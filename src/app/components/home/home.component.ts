@@ -23,23 +23,26 @@ export class HomeComponent implements OnInit{
     this.prendiGiochi();
     this.prendiDatiUtente();
 
+
     }
 
     prendiDatiUtente(){
       this.userService.datiUtente.subscribe((res: any) =>{
-        localStorage.setItem('nome', res.nome);
-        localStorage.setItem('email', res.email);
+        // localStorage.setItem('nome', res.nome);
+        // localStorage.setItem('email', res.email);
+        this.nome = res.nome;
+        this.email = res.email;
       });
 
-      if(localStorage.getItem('nome')){
-        this.nome = localStorage.getItem('nome');
-        this.email = localStorage.getItem('email');
-      }
+      // if(localStorage.getItem('nome')){
+      //   this.nome = localStorage.getItem('nome');
+      //   this.email = localStorage.getItem('email');
+      // }
     }
 
     closeModal(){
-      localStorage.removeItem('nome');
-      localStorage.removeItem('email');
+      // localStorage.removeItem('nome');
+      // localStorage.removeItem('email');
       //localStorage.clear();
 
       this.nome = '';
@@ -58,5 +61,7 @@ export class HomeComponent implements OnInit{
         }
       })
     }
+
+
     }
 

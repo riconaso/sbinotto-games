@@ -8,7 +8,9 @@ import { GiocoService } from 'src/app/services/gioco.service';
   styleUrls: ['./tendenza.component.scss']
 })
 export class TendenzaComponent implements OnInit{
+
   giochi: Gioco[];
+
 
 
   constructor(private giocoService: GiocoService){};

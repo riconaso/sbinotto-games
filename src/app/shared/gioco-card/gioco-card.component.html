@@ -1,12 +1,23 @@
-<div class="card-container" *ngFor="let gioco of giochi">
-  <div class="card">
-    <div class="card-image" [ngStyle]="{'background-image': 'url(' +gioco.imaggine +')'}"></div>
-    <div class="card-body">
-      <h5 class="card-title">{{gioco.titolo}}</h5>
-      <p class="card-text">
-        {{gioco.descrizione | slice: 0:250}}...
-       </p>
-      <a  class="btn btn-primary" routerLink="/giochi/dettaglio/{{gioco.titolo}}/{{gioco._id}}">Visualizza</a>
+<div class="container-cards">
+  <div class="container-pagination" *ngIf="pag !='home'">
+    <div class="ccc">
+      <strong>{{giochiPerPagina}}</strong> Giochi su un totale di <strong>{{giochiTotali}}</strong> giochi, pagina corrente: <strong>{{page}}</strong>
+    </div>
+    <p-paginator (onPageChange)="paginate($event)" [rows]="giochiPerPagina" [totalRecords]="giochiTotali" (rowsPerPageOptionsChange)="giochiPerPagina"></p-paginator>
+  </div>
+
+  <div class="card-container" *ngFor="let gioco of giochi | slice: (page * giochiPerPagina) - giochiPerPagina : page * giochiPerPagina">
+    <div class="card">
+      <div class="card-image" [ngStyle]="{'background-image': 'url(' +gioco.imaggine +')'}"></div>
+      <div class="card-body">
+        <h5 class="card-title">{{gioco.titolo}}</h5>
+        <p class="card-text">
+          {{gioco.descrizione | slice: 0:250}}...
+         </p>
+
+         <a  class="btn btn-primary" routerLink="dettaglio/{{gioco.titolo}}/{{gioco._id}}" *ngIf="!pag">Visualizza</a>
+        <a  class="btn btn-primary" routerLink="/giochi/dettaglio/{{gioco.titolo}}/{{gioco._id}}" *ngIf="pag">Dettagli</a>
+      </div>
     </div>
   </div>
 </div>
