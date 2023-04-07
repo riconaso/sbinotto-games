@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list
 import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
+import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     GiochiListComponent,
     TendenzaComponent,
     RegistrazioneComponent,
+    NewGiochiComponent,
 
 
   ],
@@ -56,7 +59,8 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
     ImageModule,
     FontAwesomeModule,
     ButtonModule,
-    PaginatorModule
+    PaginatorModule,
+    HttpClientModule
 
 
 

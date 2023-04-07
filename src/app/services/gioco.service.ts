@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Gioco } from '../models/gioco.model';
 import { GIOCHI } from '../mocks/giochi.mock';
 import {Observable, of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,24 @@ import {Observable, of} from 'rxjs';
 
 export class GiocoService {
 
-  constructor() { }
+  apiBaseUrl = 'api/giochi';
+
+  constructor(private http: HttpClient) { }
 
   getGioco(): Observable<Gioco[]> {
-    return of (GIOCHI);
+    //return of (GIOCHI);
+    return this.http.get<Gioco[]>(`${this.apiBaseUrl}/`);
   }
 
-  getGiochi(id: number): Observable<Gioco> {
-    const gioco = GIOCHI.find(gioco => gioco._id === id);
-    return of (gioco);
+  getGiochi(id: string): Observable<Gioco> {
+    // const gioco = GIOCHI.find(gioco => gioco._id === id);
+    // return of (gioco);
+    return this.http.get<Gioco>(`${this.apiBaseUrl}/${id}`);
 
+  }
+
+  insertGioco(gioco: any): Observable<any>{
+    return this.http.post<any>(`${this.apiBaseUrl}/`, gioco);
   }
 
   // getGiochiTendenza(tendenza: number): Observable<Gioco>{

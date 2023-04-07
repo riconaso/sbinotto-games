@@ -6,6 +6,7 @@ import { PrimeNGConfig} from 'primeng/api';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { take } from 'rxjs';
 @Component({
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
@@ -13,6 +14,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 })
 export class RegistrazioneComponent implements OnInit{
+  utenteInserito: any;
 
   selectedCities: string[] = [];
   constructor(
@@ -35,13 +37,13 @@ export class RegistrazioneComponent implements OnInit{
   form = new FormGroup({
     nome: new FormControl('',Validators.required),
     cognome: new FormControl('', Validators.required),
-    data: new FormControl('', Validators.required),
+    data: new FormControl('', ),
     nickName: new FormControl('', Validators.required),
     via: new FormControl('', Validators.required),
     email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
     ripetiPassword: new FormControl('', Validators.required),
-    piattaforma: new FormControl('', Validators.required),
+    piattaforma: new FormControl('',),
     accetto: new FormControl('', Validators.requiredTrue)
   },
   [CustomerValidator.MatchValidator('password', 'ripetiPassword')]
@@ -49,14 +51,23 @@ export class RegistrazioneComponent implements OnInit{
 
   onSubmit(){
     //console.log(this.form.value);
-    const user = {
-      nome: this.form.value.nome,
-      email: this.form.value.email
-    }
+    // nome: this.form.value.nome,
+    // email: this.form.value.email
+    const user = this.form.value;
+    this.userService.insertUser(user).pipe(take(1)).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.utenteInserito = res;
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
 
     this.userService.datiUtente.next(user);
-
     this.router.navigate(['home']);
+
   }
 
   open(content: any, titolo?:string){

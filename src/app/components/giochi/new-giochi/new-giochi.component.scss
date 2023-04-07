@@ -1,0 +1,104 @@
+@import "../../../../styles/colors.scss";
+
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched{
+  border: 1px solid rgb(7, 216, 7);
+}
+
+.colonna-dx{
+   background-image: url("../../../../assets/images/foto-registrazione.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius:  0px 25px 25px 0px;
+}
+.p-md-5 {
+  padding: 1rem !important;
+}
+
+.btn{
+  background-color: $primary-color-1 !important;
+  border: none !important;
+}
+
+p.help.is-danger{
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.check{
+  height: 50px;
+  width: 70%;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.mat-icon {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 66px;
+  width: 30px;
+  overflow: hidden;
+}
+
+// CSS MODIFICARE COLORI
+.modal-header {
+  background-color: $primary-color-2;
+  color: $primary-color-2;
+
+  .btn-close {
+    box-sizing: content-box;
+    width: 4em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: $primary-color-2;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.375rem;
+    opacity: 1.5;
+  }
+}
+
+.modal-body {
+
+  .testo-riepilogo {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 100px;
+  }
+
+  .immagine-ricetta {
+    height: 350px;
+    width: 350px;
+    float: right;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+}
+
+.modal-footer {
+  background-color: #8e210b;
+  color: white;
+
+  .btn-modal {
+    background-color: $primary-color-2;
+    color: white;
+    font-weight: 700;
+    border: 2px solid $primary-color-2;
+  }
+}
+
+h3.modal-title {
+  color: white;
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import  { faGamepad, faHouse,faBoxArchive, faUser}  from '@fortawesome/free-solid-svg-icons' ;
 import { faPlaystation, faXbox,  } from '@fortawesome/free-brands-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 // import  { faPlaystation }  from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ export class HeaderComponent {
   faHouse = faHouse;
   faBoxArchive =faBoxArchive;
   faUser = faUser;
+  faPlus = faPlus;
 
 
 }

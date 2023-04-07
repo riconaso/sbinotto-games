@@ -6,12 +6,14 @@ import { GiochiListComponent } from './components/giochi/giochi-list/giochi-list
 import { DetailComponent } from './components/giochi/detail/detail.component';
 import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
+import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'giochi', component: GiochiComponent, children: [
     {path: 'dettaglio/:titolo/:_id', component:DetailComponent},
+    { path: 'nuovo-gioco', component: NewGiochiComponent},
     {path: '', pathMatch: 'full', component: GiochiListComponent},
   ]},
   {path: 'registrazione', component: RegistrazioneComponent},
