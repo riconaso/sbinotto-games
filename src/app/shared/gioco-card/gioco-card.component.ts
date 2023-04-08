@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Gioco } from './../../models/gioco.model';
 import { GiocoService } from 'src/app/services/gioco.service';
-import { first, take } from 'rxjs';
+import { delay, first, take } from 'rxjs';
 @Component({
   selector: 'app-gioco-card',
   templateUrl: './gioco-card.component.html',
@@ -14,7 +14,8 @@ export class GiocoCardComponent implements OnInit, OnDestroy {
 giochiTotali: number;
 giochi: Gioco[]
 page = 1;
-giochiPerPagina = 4;
+giochiPerPagina = 8;
+loading = true;
 
 constructor(private giocoService: GiocoService){}
 
@@ -28,16 +29,19 @@ ngOnInit(): void {
   }
 
   prendiGiochi(){
-    this.giocoService.getGioco().pipe(first()).subscribe({
+    this.giocoService.getGioco().pipe(
+      delay(2000),
+      first()).subscribe({
       next: (res) => {
         this.giochi = res;
+        this.loading = false;
         this.giochiTotali = res.length;
         if(this.pag == 'tendenza'){
           this.giochi = res.filter(gioco => gioco.tendenza).slice(0,20);
           this.giochiTotali = res.filter(gioco => gioco.tendenza).slice(0,20).length;// Cosi è dinamico e cambia il numero delle pagine in base ai giochi
         }
         if(this.pag == 'home'){
-          this.giochi = this.giochi.sort((a,b)=> b._id - a._id).slice(0,4);
+          this.giochi = this.giochi.sort((a,b)=> b._id - a._id).slice(0,8);
         }
       },
       error: (error) => {
