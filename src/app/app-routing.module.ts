@@ -7,6 +7,7 @@ import { DetailComponent } from './components/giochi/detail/detail.component';
 import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
+import { LoginComponent } from './components/user/login/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
   ]},
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'tendenza', component: TendenzaComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

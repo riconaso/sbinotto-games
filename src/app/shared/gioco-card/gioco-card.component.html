@@ -17,6 +17,8 @@
 
          <a  class="btn btn-primary" routerLink="dettaglio/{{gioco.titolo}}/{{gioco._id}}" *ngIf="!pag">Visualizza</a>
         <a  class="btn btn-primary" routerLink="/giochi/dettaglio/{{gioco.titolo}}/{{gioco._id}}" *ngIf="pag">Dettagli</a>
+
+        <a class="btn btn-primary delete" *ngIf="ruolo === 'admin' ">ELIMINA</a>
       </div>
     </div>
   </div>

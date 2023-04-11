@@ -4,10 +4,12 @@ import { take } from 'rxjs';
 import { GiocoService } from 'src/app/services/gioco.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-new-giochi',
   templateUrl: './new-giochi.component.html',
-  styleUrls: ['./new-giochi.component.scss']
+  styleUrls: ['./new-giochi.component.scss'],
+  providers: [MessageService]
 })
 export class NewGiochiComponent {
   giocoInserito: any;
@@ -22,7 +24,12 @@ export class NewGiochiComponent {
     pubblicato: new FormControl(false),
   })
 
-  constructor(private giocoService: GiocoService, private router: Router, private modal: NgbModal){}
+  constructor(
+    private giocoService: GiocoService,
+    private router: Router,
+    private modal: NgbModal,
+    private messageService: MessageService
+    ){}
 
   onSubmit(){
    // console.log(this.form.value)
@@ -31,6 +38,8 @@ export class NewGiochiComponent {
     next: (res) => {
       console.log(res);
       this.giocoInserito = res;
+      this.messageService.add({severity:'success', summary:'completato', detail:'gioco caricato correttamente', life: 3000})
+
     },
     error: (err) => {
       console.log(err);

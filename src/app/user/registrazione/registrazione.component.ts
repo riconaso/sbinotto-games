@@ -7,10 +7,12 @@ import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { take } from 'rxjs';
+
 @Component({
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
-  styleUrls: ['./registrazione.component.scss']
+  styleUrls: ['./registrazione.component.scss'],
+
 
 })
 export class RegistrazioneComponent implements OnInit{
@@ -22,6 +24,7 @@ export class RegistrazioneComponent implements OnInit{
     private userService: UserService,
     private router: Router,
     private modalService: NgbModal,
+
      ){}
 
      ngOnInit(): void {

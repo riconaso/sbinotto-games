@@ -22,4 +22,21 @@ h6 {
 //   max-width: 100%;
 // }
 
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+  .container-footer{
+    width: auto;
+    margin-top: 10px;
+    padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container-footer {
+    padding: 10px;
+    height: auto;
+    width: 90%; // Riduce la larghezza del footer per adattarsi al tablet orizzontale
+    margin-top: 20px; // Aumenta la margin-top per distanziare il footer dagli altri elementi del layout
+    }
+    }
 

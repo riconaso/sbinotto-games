@@ -84,12 +84,9 @@
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
-            <a class="nav-link" routerLink="registrazione"> <fa-icon  [icon] =" faUser"></fa-icon>Registrazione</a>
-          </li>
-          <li class="nav-item">
-            <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
             <a class="nav-link" routerLink="giochi/nuovo-gioco"> <fa-icon  [icon] =" faPlus"></fa-icon>Nuovo Gioco</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faPlaystation "></fa-icon>Playstation</a>
             <!-- <a class="nav-link" href="#"><mat-icon>videogame_asset</mat-icon>Playstation</a> -->
@@ -101,6 +98,17 @@
           <li class="nav-item">
             <!-- <a class="nav-link" href="#"><mat-icon>desktop_windows</mat-icon>PC</a> -->
             <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faGamepad "></fa-icon>Nintendo</a>
+          </li>
+
+
+          <li class="nav-item user" *ngIf="!authService.isLogged()">
+            <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
+            <a class="nav-link" routerLink="login"> <fa-icon  [icon] =" faUser"></fa-icon>Accedi</a>
+          </li>
+          <li class="nav-item user" *ngIf="authService.isLogged()">
+            <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
+            <span class="name">Ciao {{user.nome}}</span>
+            <a class="nav-link" (click)="logout()"> - ESCI</a>
           </li>
         </ul>
       </div>

@@ -2,6 +2,7 @@ import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { Gioco } from './../../models/gioco.model';
 import { GiocoService } from 'src/app/services/gioco.service';
 import { delay, first, take } from 'rxjs';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-gioco-card',
   templateUrl: './gioco-card.component.html',
@@ -17,11 +18,21 @@ page = 1;
 giochiPerPagina = 8;
 loading = true;
 
-constructor(private giocoService: GiocoService){}
+ruolo: any;
+
+constructor(
+  private giocoService: GiocoService,
+  private userService: UserService,
+  ){}
 
 
 ngOnInit(): void {
     this.prendiGiochi();
+    if(JSON.parse(localStorage.getItem('user')) != null){
+      this.userService.userRole.subscribe({
+        next: res => this.ruolo = res
+      })
+    }
   }
 
   ngOnDestroy(): void {
@@ -30,7 +41,7 @@ ngOnInit(): void {
 
   prendiGiochi(){
     this.giocoService.getGioco().pipe(
-      delay(2000),
+      // delay(4000),
       first()).subscribe({
       next: (res) => {
         this.giochi = res;

@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   datiUtente = new ReplaySubject;
   apiBaseUrl = 'api/users';
+  userRole = new ReplaySubject;
 
   constructor(private htttp: HttpClient) { }
 

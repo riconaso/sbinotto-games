@@ -26,6 +26,8 @@ import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ToastModule} from 'primeng/toast';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.co
     TendenzaComponent,
     RegistrazioneComponent,
     NewGiochiComponent,
+    LoginComponent,
 
 
   ],
@@ -60,7 +63,8 @@ import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.co
     FontAwesomeModule,
     ButtonModule,
     PaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule
 
 
 

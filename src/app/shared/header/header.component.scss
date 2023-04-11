@@ -48,12 +48,67 @@
     }
 
 
-
-
-
-
     li.nav-item {
       margin-bottom: 10px;
       margin-top: 10px;
     }
 
+  //   li.nav-item.user {
+  //     margin-left: 70px;
+  //     border: 1px solid white;
+  //     border-radius: 8px;
+  //     padding: 0px 20px;
+  // }
+
+  li.nav-item.user {
+    margin-left: 11px;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 0px 20px;
+
+  }
+  .nav-link {
+  display: inline-block;
+}
+
+span.name {
+  color: white;
+}
+
+
+
+    @media only screen and (min-width: 0px) and (max-width: 480px) {
+
+      .navbar-brand {
+        width: 80%;
+        font-size: 30px;
+        text-align: center;
+      }
+      .navbar-brand .icona-sbinottogames {
+        width: 30px;
+        height: 30px;
+      }
+
+    }
+
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .navbar-brand {
+        width: 50%;
+        text-align: center;
+      }
+
+      .navbar-brand .icona-sbinottogames {
+        width: 60px;
+        height: 60px;
+      }
+
+      .navbar-nav {
+        width: 100%;
+      }
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+      }
+    }
