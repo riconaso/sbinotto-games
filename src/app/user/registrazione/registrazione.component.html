@@ -93,6 +93,7 @@
 
                   </div>
 
+
                   <div class="form-outline mb-4">
 
                     <label class="form-label" for="form3Example9">Password</label>
@@ -131,8 +132,6 @@
                     <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('ripetiPassword').touched">Attenzione la password inserita non combacia</p>
                   </div>
 
-
-
                   <div class="form-check d-flex justify-content-center mb-5  ">
                     <div class="check">
                       <input class="form-check-input me-2 check-box" type="checkbox" value="" id="form2Example3c" name="accetto"  formControlName="accetto"/>
@@ -142,7 +141,6 @@
                       <p class="help is-danger" *ngIf="!form.get('accetto').valid && form.get('accetto').touched">Il campo accetta é necessario per proseguire</p>
                     </div>
                   </div>
-
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <!-- <button type="submit" class="btn btn-primary btn-lg" [disabled]="!form.valid">Registrati</button> -->

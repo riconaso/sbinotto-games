@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { take } from 'rxjs';
 
+
 @Component({
   selector: 'app-registrazione',
   templateUrl: './registrazione.component.html',
@@ -19,6 +20,8 @@ export class RegistrazioneComponent implements OnInit{
   utenteInserito: any;
 
   selectedCities: string[] = [];
+
+
   constructor(
     private config: PrimeNGConfig,
     private userService: UserService,
@@ -47,10 +50,13 @@ export class RegistrazioneComponent implements OnInit{
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
     ripetiPassword: new FormControl('', Validators.required),
     piattaforma: new FormControl('',),
-    accetto: new FormControl('', Validators.requiredTrue)
+    accetto: new FormControl('', Validators.requiredTrue),
+
   },
   [CustomerValidator.MatchValidator('password', 'ripetiPassword')]
   );
+
+
 
   onSubmit(){
     //console.log(this.form.value);

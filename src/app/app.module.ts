@@ -28,6 +28,8 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
 import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ToastModule} from 'primeng/toast';
+import { ProfileComponent } from './components/user/profile/profile.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
 @NgModule({
@@ -45,6 +47,7 @@ import { ToastModule} from 'primeng/toast';
     RegistrazioneComponent,
     NewGiochiComponent,
     LoginComponent,
+    ProfileComponent,
 
 
   ],
@@ -64,7 +67,8 @@ import { ToastModule} from 'primeng/toast';
     ButtonModule,
     PaginatorModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    CKEditorModule
 
 
 

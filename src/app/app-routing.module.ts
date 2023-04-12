@@ -8,6 +8,8 @@ import { TendenzaComponent } from './components/tendenza/tendenza.component';
 import { RegistrazioneComponent } from './user/registrazione/registrazione.component';
 import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
 import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
+import { LoggedInGuard } from './logged-in.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -20,6 +22,7 @@ const routes: Routes = [
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'tendenza', component: TendenzaComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'profilo', component: ProfileComponent, canActivate: [LoggedInGuard]},
   {path: '**', redirectTo: 'home'}
 ];
 

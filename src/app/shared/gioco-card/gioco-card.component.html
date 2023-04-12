@@ -12,7 +12,8 @@
       <div class="card-body">
         <h5 class="card-title">{{gioco.titolo}}</h5>
         <p class="card-text">
-          {{gioco.descrizione | slice: 0:250}}...
+
+          <span [innerHTML]="gioco.descrizione | slice: 0:250">...</span>
          </p>
 
          <a  class="btn btn-primary" routerLink="dettaglio/{{gioco.titolo}}/{{gioco._id}}" *ngIf="!pag">Visualizza</a>

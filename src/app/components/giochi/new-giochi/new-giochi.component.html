@@ -26,7 +26,7 @@
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="form3Example3c">Descrizione</label>
-                      <textarea name="description" id="description" cols="30" rows="5" class="form-control" placeholder="Descrivi il tuo gioco"  formControlName="descrizione"></textarea>
+                      <ckeditor [editor]="Editor" [config]="editorConfig" class="descrizione-gioco" placeholder="Descrivi il tuo gioco"  formControlName="descrizione"></ckeditor>
                       <!-- <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.get('email').touched">Il campo email è obbligatorio</p>
                         <p class="help is-danger" *ngIf="form.controls['email'].hasError('email') && form.get('email').dirty && form.get('email').touched">Il campo email non contiene una email valida</p> -->
                       </div>
@@ -131,7 +131,9 @@
               <div class="testo-riepilogo">
                 <ul>
                   <li>Titolo: {{giocoInserito.titolo}}</li>
-                  <li> Descrizione:{{giocoInserito.descrizione }}</li>
+                  <li> Descrizione:
+                    <span [innerHTML]="giocoInserito.descrizione"></span>
+                  </li>
                   <li>Prezzo: {{giocoInserito.prezzo}}</li>
                   <li>Pubblicato: {{giocoInserito.pubblicato}}</li>
                   <li>Data: {{giocoInserito.createdAt | date}}</li>

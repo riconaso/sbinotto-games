@@ -5,6 +5,7 @@ import { GiocoService } from 'src/app/services/gioco.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { MessageService } from 'primeng/api';
+import * as ClassicEditorBuild from '@ckeditor/ckeditor5-build-classic';
 @Component({
   selector: 'app-new-giochi',
   templateUrl: './new-giochi.component.html',
@@ -23,6 +24,47 @@ export class NewGiochiComponent {
     tendenza: new FormControl(false),
     pubblicato: new FormControl(false),
   })
+
+  Editor = ClassicEditorBuild;
+
+  editorConfig = {
+    toolbar: {
+        items: [
+            'bold',
+            'italic',
+            'link',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'indent',
+            'outdent',
+            '|',
+            'codeBlock',
+            'imageUpload',
+            'blockQuote',
+            'insertTable',
+            'undo',
+            'redo',
+        ]
+    },
+    image: {
+        toolbar: [
+            'imageStyle:full',
+            'imageStyle:side',
+            '|',
+            'imageTextAlternative'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells'
+        ]
+    },
+    height: 300,
+};
+
 
   constructor(
     private giocoService: GiocoService,

@@ -1,5 +1,5 @@
     .icone{
-      font-size: 15px;
+      font-size: 110%;
 
       margin-left: auto;
     }
@@ -17,7 +17,7 @@
       font-size: 50px;
       text-align: justify;
 
-      justify-content: end;
+       justify-content: end;
 
 
     }
@@ -61,7 +61,7 @@
   // }
 
   li.nav-item.user {
-    margin-left: 11px;
+    margin-left: 11px; //11PX
     border: 1px solid white;
     border-radius: 8px;
     padding: 0px 20px;

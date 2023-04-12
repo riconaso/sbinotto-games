@@ -14,7 +14,7 @@ export class HeaderComponent implements DoCheck{
 
   faPlaystation  =  faPlaystation ;
   faXbox = faXbox;
-  faGamepad = faGamepad;ù
+  faGamepad = faGamepad;
   faHouse = faHouse;
   faBoxArchive =faBoxArchive;
   faUser = faUser;

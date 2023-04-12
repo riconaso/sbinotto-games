@@ -25,7 +25,9 @@
         <h2 class="titolo-gioco1">{{gioco.titolo}}</h2>
       </li>
       <li>
-        <p class="des-gioco">{{gioco.descrizione}}</p>
+        <p class="des-gioco">
+          <span [innerHTML]="gioco.descrizione"></span>
+        </p>
       </li>
       <li>
         <p class="prezzo-gioco">{{gioco.prezzo | currency:'EUR'}}</p>

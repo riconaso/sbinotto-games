@@ -9,9 +9,14 @@ export class UserService {
   apiBaseUrl = 'api/users';
   userRole = new ReplaySubject;
 
-  constructor(private htttp: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   insertUser(user: any): Observable<any>{
-    return this.htttp.post<any>(`${this.apiBaseUrl}/signup`, user);
+    return this.http.post<any>(`${this.apiBaseUrl}/signup`, user);
+  }
+
+  getUser(email: string): Observable<any>{
+    const emailUtente = { 'email': email};
+    return this.http.post<any>(`${this.apiBaseUrl}/user`, emailUtente);
   }
 }

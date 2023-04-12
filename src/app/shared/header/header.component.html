@@ -67,8 +67,11 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-red navbar-primaria">
     <div class="container-fluid">
+      <div class="contaienr-logo">
       <img src="../assets/images/icona-sbinottogames.png" class="icona-sbinottogames">
       <a class="navbar-brand" routerLink="home">sbinottogames</a>
+      </div>
+      <div class="container-pulsanti">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,29 +79,29 @@
         <ul class="navbar-nav icone">
           <li class="nav-item ">
             <!-- <a class="nav-link active" aria-current="page" routerLink="home"><mat-icon>home</mat-icon>Home</a> -->
-            <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faHouse"></fa-icon>Home</a>
+            <a class="nav-link" routerLink="#"> <fa-icon [icon] ="faHouse"></fa-icon>Home</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" routerLink="giochi"><mat-icon>bookshelf</mat-icon>Libreria</a> -->
-            <a class="nav-link" routerLink="giochi"> <fa-icon  [icon] =" faBoxArchive"></fa-icon>Libreria</a>
+            <a class="nav-link" routerLink="giochi"> <fa-icon [icon] ="faBoxArchive"></fa-icon>Libreria</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
-            <a class="nav-link" routerLink="giochi/nuovo-gioco"> <fa-icon  [icon] =" faPlus"></fa-icon>Nuovo Gioco</a>
+            <a class="nav-link" routerLink="giochi/nuovo-gioco"> <fa-icon [icon] ="faPlus"></fa-icon>Nuovo Gioco</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faPlaystation "></fa-icon>Playstation</a>
+            <a class="nav-link" routerLink="#"> <fa-icon [icon] ="faPlaystation "></fa-icon>Playstation</a>
             <!-- <a class="nav-link" href="#"><mat-icon>videogame_asset</mat-icon>Playstation</a> -->
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#"><mat-icon>gamepad</mat-icon>Nintendo</a> -->
-            <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faXbox "></fa-icon>Xbox</a>
+            <a class="nav-link" routerLink="#"> <fa-icon [icon] ="faXbox "></fa-icon>Xbox</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item"> -->
             <!-- <a class="nav-link" href="#"><mat-icon>desktop_windows</mat-icon>PC</a> -->
-            <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faGamepad "></fa-icon>Nintendo</a>
-          </li>
+            <!-- <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faGamepad "></fa-icon>Nintendo</a>
+          </li> -->
 
 
           <li class="nav-item user" *ngIf="!authService.isLogged()">
@@ -108,9 +111,11 @@
           <li class="nav-item user" *ngIf="authService.isLogged()">
             <!-- <a class="nav-link" routerLink="registrazione"><mat-icon>person</mat-icon>Registrazione</a> -->
             <span class="name">Ciao {{user.nome}}</span>
+            <a class="nav-link" routerLink="profilo"> -PROFILO</a>
             <a class="nav-link" (click)="logout()"> - ESCI</a>
           </li>
         </ul>
+        </div>
       </div>
     </div>
   </nav>
