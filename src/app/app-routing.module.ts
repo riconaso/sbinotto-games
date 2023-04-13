@@ -9,6 +9,7 @@ import { RegistrazioneComponent } from './user/registrazione/registrazione.compo
 import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { ResultComponent } from './components/giochi/result/result.component';
 import { LoggedInGuard } from './logged-in.guard';
 
 const routes: Routes = [
@@ -17,12 +18,14 @@ const routes: Routes = [
   {path: 'giochi', component: GiochiComponent, children: [
     {path: 'dettaglio/:titolo/:_id', component:DetailComponent},
     { path: 'nuovo-gioco', component: NewGiochiComponent},
+    {path: 'cerca/:text', component: ResultComponent},
     {path: '', pathMatch: 'full', component: GiochiListComponent},
   ]},
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'tendenza', component: TendenzaComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profilo', component: ProfileComponent, canActivate: [LoggedInGuard]},
+
   {path: '**', redirectTo: 'home'}
 ];
 

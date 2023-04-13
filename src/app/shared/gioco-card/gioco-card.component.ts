@@ -17,7 +17,7 @@ giochi: Gioco[]
 page = 1;
 giochiPerPagina = 8;
 loading = true;
-
+ricercato: any;
 ruolo: any;
 
 constructor(
@@ -44,15 +44,39 @@ ngOnInit(): void {
       // delay(4000),
       first()).subscribe({
       next: (res) => {
-        this.giochi = res;
-        this.loading = false;
-        this.giochiTotali = res.length;
-        if(this.pag == 'tendenza'){
-          this.giochi = res.filter(gioco => gioco.tendenza).slice(0,20);
-          this.giochiTotali = res.filter(gioco => gioco.tendenza).slice(0,20).length;// Cosi è dinamico e cambia il numero delle pagine in base ai giochi
-        }
-        if(this.pag == 'home'){
-          this.giochi = this.giochi.sort((a,b)=> b._id - a._id).slice(0,8);
+        if(this.pag === 'ricerca') {
+          this.giocoService.testoCercato.subscribe({
+            next: (res) => {
+              this.ricercato = res;
+              if(this.ricercato) {
+                this.giocoService.findGiochi(this.ricercato).subscribe({
+                  next: (res) => {
+                    this.giochi = res;
+                    this.loading = false;
+                    this.giochiTotali = res.length;
+                    console.log(res);
+                  },
+                  error: (err) => {
+                    console.log(err);
+                  }
+                })
+              }
+            },
+            error: (err) => {
+              console.error(err);
+            }
+          });
+        } else {
+          this.giochi = res;
+          this.loading = false;
+          this.giochiTotali = res.length;
+          if(this.pag == 'tendenza'){
+            this.giochi = res.filter(gioco => gioco.tendenza).slice(0,20);
+            this.giochiTotali = res.filter(gioco => gioco.tendenza).slice(0,20).length;// Cosi è dinamico e cambia il numero delle pagine in base ai giochi
+          }
+          if(this.pag == 'home'){
+            this.giochi = this.giochi.sort((a,b)=> b._id - a._id).slice(0,8);
+          }
         }
       },
       error: (error) => {
@@ -81,6 +105,7 @@ paginate(event){
   event.page = event.page +1;
   this.page = event.page;
 }
+
 
 
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Gioco } from '../models/gioco.model';
 import { GIOCHI } from '../mocks/giochi.mock';
-import {Observable, of} from 'rxjs';
+import {Observable, ReplaySubject, of} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class GiocoService {
 
   apiBaseUrl = 'api/giochi';
+
+  testoCercato = new ReplaySubject;
 
   constructor(private http: HttpClient) { }
 
@@ -34,4 +36,8 @@ export class GiocoService {
   //   const giocoInTendenza = GIOCHI.find(gioco => gioco.tendenza === tendenza);
   //   return of (giocoInTendenza);
   // }
+
+  findGiochi(text: string): Observable<any>{
+    return this.http.get<any>(`${this.apiBaseUrl}/cerca/${text}`);
+  }
 }

@@ -30,6 +30,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { ToastModule} from 'primeng/toast';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { ResultComponent } from './components/giochi/result/result.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     NewGiochiComponent,
     LoginComponent,
     ProfileComponent,
+    ResultComponent,
 
 
   ],

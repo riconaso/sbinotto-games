@@ -75,6 +75,20 @@ span.name {
   color: white;
 }
 
+.search{
+  width: max-content;
+  height: max-content;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+input.search-form {
+
+  width: 139px;
+  margin-left: 30px;
+  margin-top: 5px;
+
+}
 
 
     @media only screen and (min-width: 0px) and (max-width: 480px) {
