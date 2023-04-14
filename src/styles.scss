@@ -125,5 +125,24 @@ html, body { height: 100%; }
     max-width: 390px!important;
     margin-left: 50px;
   }
+
+  .p-image-preview-container>img {
+    cursor: pointer;
+    width: 600px;
+    height: 400px;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 480px) {
+    .p-image-preview-container>img {
+      width: 436px;
+      height: 348px;
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .p-image-preview-container>img {
+      width: 700px;
+      height: 400px;
+    }
+  }
   /* Importing Bootstrap SCSS file. */
   @import 'bootstrap/scss/bootstrap';

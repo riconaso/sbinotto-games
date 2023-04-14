@@ -20,6 +20,7 @@ apiBaseUrl = 'api/users';
       nome: res.nome,
       email: res.email,
       password: res.password,
+      role: res.role
     }
 
     this.userService.userRole.next(res.role);

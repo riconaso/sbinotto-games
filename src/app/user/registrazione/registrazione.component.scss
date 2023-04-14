@@ -135,5 +135,15 @@ a.terminiS {
   color: red;
 }
 
+label.form-check-label.servizio {
+margin-top: 25px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  label.form-check-label.servizio {
+    margin-top: -18px;
+    }
+
+}
 
 

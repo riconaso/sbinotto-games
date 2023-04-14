@@ -106,6 +106,19 @@ div#container-utente {
 }
 }
 
+@media only screen and (min-width:0px) and (max-width: 480px){
+  div#container-utente {
+    div#dati-utente{
+      width: 90%;
+      height: 305px;
+    }
+    div#dati-utente {
+      width: 90%;
+      height: 305px;
+    }
+}
+}
+
 @media only screen and (min-width: 0px) and (max-width: 480px) {
 
   .container-titolo{

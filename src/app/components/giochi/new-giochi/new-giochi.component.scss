@@ -404,4 +404,22 @@ h3.modal-title {
   }
 }
 
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+.modal-body {
+  .immagine-ricetta {
+    height: 214px;
+    width: 255px;
+    float: right;
+  }
+}
+}
 
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .modal-body {
+    .immagine-ricetta {
+      height: 238px;
+      width: 295px;
+      float: right;
+    }
+  }
+  }

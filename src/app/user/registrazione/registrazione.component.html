@@ -134,9 +134,9 @@
 
                   <div class="form-check d-flex justify-content-center mb-5  ">
                     <div class="check">
-                      <input class="form-check-input me-2 check-box" type="checkbox" value="" id="form2Example3c" name="accetto"  formControlName="accetto"/>
-                      <label class="form-check-label " for="form2Example3">
-                        Dichiaro di accettare i <a class="terminiS" (click)="open(modaleServizi)">Termini del servizio</a>
+                      <input class="form-check-input me-2 check-box " type="checkbox" value="" id="form2Example3c" name="accetto"  formControlName="accetto"/>
+                      <label class="form-check-label servizio " for="form2Example3 ">
+                        Dichiaro di accettare i <a class="terminiS servizio" (click)="open(modaleServizi)">Termini del servizio</a>
                       </label>
                       <p class="help is-danger" *ngIf="!form.get('accetto').valid && form.get('accetto').touched">Il campo accetta é necessario per proseguire</p>
                     </div>

@@ -24,16 +24,26 @@ constructor(
   private giocoService: GiocoService,
   private userService: UserService,
   ){}
+  // this.userService.userRole.subscribe({
+  //   next: res => this.ruolo = res
+  // })
 
 
 ngOnInit(): void {
     this.prendiGiochi();
     if(JSON.parse(localStorage.getItem('user')) != null){
-      this.userService.userRole.subscribe({
-        next: res => this.ruolo = res
-      })
+      this.ruolo =JSON.parse(localStorage.getItem('user')).role;
     }
   }
+  onGetUser(email): void{
+    this.userService.getUser(email).pipe(take(1))
+    .subscribe({
+      next: res =>{
+        this.ruolo=res.role;
+      },
+      error: err => console.log(err)
+    })
+   }
 
   ngOnDestroy(): void {
     console.log('utente uscito dal componente')
