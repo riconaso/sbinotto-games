@@ -92,17 +92,17 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" routerLink="#"> <fa-icon [icon] ="faPlaystation "></fa-icon>Playstation</a>
+            <a class="nav-link" routerLink="playstation"> <fa-icon [icon] ="faPlaystation "></fa-icon>Playstation</a>
             <!-- <a class="nav-link" href="#"><mat-icon>videogame_asset</mat-icon>Playstation</a> -->
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#"><mat-icon>gamepad</mat-icon>Nintendo</a> -->
-            <a class="nav-link" routerLink="#"> <fa-icon [icon] ="faXbox "></fa-icon>Xbox</a>
+            <a class="nav-link" routerLink="x-box"> <fa-icon [icon] ="faXbox "></fa-icon>Xbox</a>
           </li>
-          <!-- <li class="nav-item"> -->
+          <li class="nav-item">
             <!-- <a class="nav-link" href="#"><mat-icon>desktop_windows</mat-icon>PC</a> -->
-            <!-- <a class="nav-link" routerLink="#"> <fa-icon  [icon] =" faGamepad "></fa-icon>Nintendo</a>
-          </li> -->
+            <a class="nav-link" routerLink="nintendo"> <fa-icon  [icon] =" faGamepad "></fa-icon>Nintendo</a>
+          </li>
 
 
           <li class="nav-item user" *ngIf="!authService.isLogged()">
@@ -133,13 +133,13 @@
           <a class="nav-link" routerLink="tendenza"><mat-icon class="rounded-circle">trending_up</mat-icon>In tendenza</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><mat-icon class="rounded-circle">event_available</mat-icon>Prossime Uscite</a>
+          <a class="nav-link" href="uscite"><mat-icon class="rounded-circle">event_available</mat-icon>Prossime Uscite</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#"><mat-icon class="rounded-circle">shopping_cart</mat-icon>Pre Ordini</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#"><mat-icon class="rounded-circle">local_offer</mat-icon>Giochi in sconto</a>
+          <a class="nav-link" href="sconto"><mat-icon class="rounded-circle">local_offer</mat-icon>Giochi in sconto</a>
           <!-- <a class="nav-link" routerLink="tendenza"> <fa-icon  [icon] =" faPlaystation "></fa-icon>Giochi in sconto</a> -->
 
         </li>

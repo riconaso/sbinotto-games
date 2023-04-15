@@ -10,6 +10,11 @@ import { NewGiochiComponent } from './components/giochi/new-giochi/new-giochi.co
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { ResultComponent } from './components/giochi/result/result.component';
+import { PlaystationComponent } from './components/playstation/playstation.component';
+import { XBoxComponent } from './components/x-box/x-box.component';
+import { NintendoComponent } from './components/nintendo/nintendo.component';
+import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-uscite.component';
+import { GiochiScontoComponent } from './components/giochi-sconto/giochi-sconto.component';
 import { LoggedInGuard } from './logged-in.guard';
 
 const routes: Routes = [
@@ -24,6 +29,11 @@ const routes: Routes = [
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'tendenza', component: TendenzaComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'playstation', component: PlaystationComponent},
+  {path: 'x-box', component: XBoxComponent},
+  {path: 'nintendo', component: NintendoComponent},
+  {path: 'uscite', component: ProssimeUsciteComponent},
+  {path: 'sconto', component: GiochiScontoComponent},
   {path: 'profilo', component: ProfileComponent, canActivate: [LoggedInGuard]},
 
   {path: '**', redirectTo: 'home'}

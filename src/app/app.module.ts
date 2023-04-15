@@ -31,6 +31,11 @@ import { ToastModule} from 'primeng/toast';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ResultComponent } from './components/giochi/result/result.component';
+import { PlaystationComponent } from './components/playstation/playstation.component';
+import { XBoxComponent } from './components/x-box/x-box.component';
+import { NintendoComponent } from './components/nintendo/nintendo.component';
+import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-uscite.component';
+import { GiochiScontoComponent } from './components/giochi-sconto/giochi-sconto.component';
 
 
 @NgModule({
@@ -50,6 +55,11 @@ import { ResultComponent } from './components/giochi/result/result.component';
     LoginComponent,
     ProfileComponent,
     ResultComponent,
+    PlaystationComponent,
+    XBoxComponent,
+    NintendoComponent,
+    ProssimeUsciteComponent,
+    GiochiScontoComponent,
 
 
   ],
